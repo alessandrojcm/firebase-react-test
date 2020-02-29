@@ -1,10 +1,15 @@
 import * as React from 'react';
-import { Toggle } from './Toggle';
+
+import classnames from 'classnames';
+
+import MessageList from './MessageList';
+import NavBar from './NavBar';
 
 export const App = () => (
-  <Toggle onToggle={on => console.log('on: ', on)}>
-    <Toggle.On>The button is on</Toggle.On>
-    <Toggle.Off>The button is off</Toggle.Off>
-    <Toggle.Button />
-  </Toggle>
+  <div className={classnames('container')}>
+    <NavBar />
+    <main className={classnames('section')}>
+      <MessageList messages={[]} />
+    </main>
+  </div>
 );
