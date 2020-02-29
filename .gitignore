@@ -7,3 +7,7 @@ dist/
 yarn-error.log
 package-lock.json
 .DS_Store
+
+tsconfig.tsbuildinfo
+
+src/**/*.d.ts
