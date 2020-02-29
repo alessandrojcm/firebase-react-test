@@ -1,5 +1,5 @@
-import * as React from 'react'
-import { Toggle } from './Toggle'
+import * as React from 'react';
+import { Toggle } from './Toggle';
 
 export const App = () => (
   <Toggle onToggle={on => console.log('on: ', on)}>
@@ -7,4 +7,4 @@ export const App = () => (
     <Toggle.Off>The button is off</Toggle.Off>
     <Toggle.Button />
   </Toggle>
-)
+);
