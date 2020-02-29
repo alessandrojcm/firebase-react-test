@@ -1,28 +1,9 @@
 import * as React from 'react';
-import { fireEvent, render } from '@testing-library/react';
+import { render } from '@testing-library/react';
 
 import { App } from '../App';
 
-/**
- * Just a simple integration tests
- */
-
-test('App Component renders with toggle switch', () => {
-  const wrap = render(<App />);
-
-  expect(wrap.getByTestId('toggle-input')).toBeInTheDocument();
-});
-
-test('App Component can change toggle status with clicking toggle switch', async () => {
-  const { container, getByTestId } = render(<App />);
-  const toggleButton = getByTestId('toggle-input');
-  expect(container).toHaveTextContent(/the button is off/i);
-
-  fireEvent.click(toggleButton);
-  expect(container).toHaveTextContent(/the button is on/i);
-  expect(toggleButton).toSatisfy(button => button.checked);
-
-  fireEvent.click(toggleButton);
-  expect(container).toHaveTextContent(/the button is off/i);
-  expect(toggleButton).toSatisfy(button => !button.checked);
+test('List shows no elements message', async () => {
+  const { getByText } = render(<App />);
+  expect(getByText('No messages received')).toBeInTheDocument();
 });
