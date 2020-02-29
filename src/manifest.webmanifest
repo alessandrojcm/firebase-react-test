@@ -1,0 +1,9 @@
+{
+  "name": "React Firebase FCM Proof of Concept",
+  "short_name": "React Firebase",
+  "start_url": "index.html",
+  "background_color": "white",
+  "display": "standalone",
+  "theme_color": "white",
+  "gcm_sender_id": "99536596851"
+}
